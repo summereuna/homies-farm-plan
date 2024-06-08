@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "PyeongChangPeace";
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NanumBarunpen";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "NanumBarunpen";
+  font-weight: 700;
+  height: 100vh;
+}
+
+.bg-image {
+  background-image: url("https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 360px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: "PyeongChangPeace";
+  font-size: 1.7rem;
+  color: white;
+  background-color: rgba(67, 111, 41, 0.7);
+  border-radius: 10px 10px 0 0;
+  padding: 0.7rem;
+}
+.message {
+  font-size: 1.3rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0 0 10px 10px;
+  padding: 0.7rem;
+}
+
+.goals {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.goal {
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: thick double rgba(139, 215, 96, 0.7);
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.2s linear;
+}
+.goal:hover {
+  border: thick double rgba(67, 111, 41, 0.7);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.done {
+  border: 0.5rem double rgba(67, 111, 41, 0.7);
+  background-color: rgba(255, 255, 255, 0.4);
+}
